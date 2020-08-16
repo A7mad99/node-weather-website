@@ -1,5 +1,3 @@
-console.log("client side is active");
-
 const weatherform = document.querySelector("form");
 const search = document.querySelector("input");
 const msgOne = document.querySelector("#msgOne");
