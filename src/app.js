@@ -1,6 +1,16 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
+// no u need to add it to dependencies
+// so its installed on the heroku server by (npm install)
+// u add a package to a dependency in package.json by doing this:
+// npm install --save hbs
+// --save flag saves the package to the dependency
+// so it allows heroku to install those packages
+// remember your node_modules are never pushed to the server
+// so packages needed in your app should ALWAYS be in the package.json
+// Got it?
+//yesir
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
@@ -11,6 +21,7 @@ const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partials = path.join(__dirname, "../templates/partials");
 app.set("port", PORT);
+
 //setup handlebar engine & views location
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
