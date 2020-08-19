@@ -15,7 +15,10 @@ weatherform.addEventListener("submit", (e) => {
         msgOne.textContent = data.error;
       } else {
         msgOne.textContent = data.location;
-        msgTwo.textContent = data.forecast;
+        msgTwo.textContent =
+          data.forecast.placename +
+          " with temp of " +
+          data.forecast.temperature;
         console.log(data.forecast);
       }
     });
